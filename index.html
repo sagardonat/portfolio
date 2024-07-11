@@ -35,19 +35,12 @@
   .floating-icon {
     animation: float 5s ease-in-out infinite;
   }
-   @keyframes cursor-animate{
-    0%,100%{ width: 1rem; height: 1rem;}
-    50%{width: 3rem; height: 3rem;}
-   }
-  .animate-cursor{
-   animation: cursor-animate 5s infinite ease-in-out;
-  }
   </style>
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white ">
    
-  <div  class=" cursor fixed rounded-full w-12 h-12 pointer-events-none border-2 border-gray-500 z-50 translate-x-[-50%] translate-y-[-50%] animate-cursor "> </div><!-- CURSER DIV -->
+  <div  class=" cursor fixed rounded-full w-12 h-12 pointer-events-none border-2 border-gray-500 z-50 translate-x-[-50%] translate-y-[-50%]   "> </div><!-- CURSER DIV -->
  
   <header class="bg-black text-white sticky-top shadow-slate-600 ">
     <nav class="flex justify-end space-x-8 p-4 sticky-top mr-56 shadow-white">
@@ -65,7 +58,7 @@
         <span class="text-red-500 custom-font-bold shadow">sagar</span>
       </h1>
     </div>
-<!-- Right side content -->
+<!-- Right side content imases annd floting icos -->
 <div class="relative flex-1 flex justify-center">
   <img src="static/profile2.webp" alt="Sagar's Photo" class="object-cover rounded-full h-full p-16" />
 
@@ -73,7 +66,7 @@
     <img src="static/svg/djangoproject-svgrepo-com.svg" alt="Icon">
   </div>
   <div class="absolute top-60 left-[15%] w-12 h-12 floating-icon " style="animation-delay: 1s; animation-duration: 6s;" >
-    <img src="static/svg/git-svgrepo-com.svg" alt="HTML5 Icon">
+    <img src="static/svg/git-svgrepo-com.svg" alt="Icon">
   </div>
   <div class="absolute top-[10%] left-[60%] w-12 h-12 floating-icon" style="animation-delay: 2s; animation-duration: 7s;" >
     <img src="static/svg/html-5-svgrepo-com.svg" alt="HTML5 Icon">
@@ -165,6 +158,37 @@
       </div>
     </div>
   </div>
+  <!-- footer content  -->
+  <footer class="bg-green-200 py-6 text-black ">
+    <h4 class="m-5 p-5 text-center text-4xl font-semibold">All the stars are closer !</h4>
+    <h4 class="text-4xl font-semibold"></h4>
+  
+    <div class="container mx-auto flex items-center justify-between p-5 ">
+      <div class="w-1/3">
+        <p>Email: <a href="mailto:youremail@example.com" class="text-blue-400">youremail@example.com</a></p>
+      </div>
+      <div class="w-1/3">
+        <h4 class="text-xl font-semibold">Follow Me</h4>
+        <div class="flex flex-col text-left">
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-xl">LinkedIn</a>
+          <a href="https://github.com/yourprofile" target="_blank" class="hover:text-xl">GitHub</a>
+          <a href="https://twitter.com/yourprofile" target="_blank" class="hover:text-xl">Twitter</a>
+        </div>
+      </div>
+      <div class="w-1/3">
+        <h4 class="text-xl font-semibold">Quick Links</h4>
+        <ul>
+          <li><a href="#home" class="text-blue-400">Home</a></li>
+          <li><a href="#about" class="text-blue-400">About</a></li>
+          <li><a href="#contact" class="text-blue-400">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-6 text-center">
+      <p>© 2024 SAGAR. All rights reserved.</p>
+    </div>
+  </footer>
+  
   <script src="script.js"></script>
 </body>
 </html>
