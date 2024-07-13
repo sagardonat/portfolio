@@ -8,7 +8,23 @@
   <link rel="stylesheet" href="src/output.css" />
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,800;1,6..96,800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+    
+    @keyframes float {
+      0% {
+        transform: translate(0, 0);
+      }
 
+      50% {
+        transform: translate(10px, 10px);
+      }
+
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+    HTML{
+      scroll-behavior: smooth;
+    }
     body {
       font-family: "Roboto Condensed", serif;
       font-optical-sizing: auto;
@@ -27,99 +43,103 @@
     .custom-font-bold {
       font-family: Bodoni Moda SC;
     }
-    @keyframes float {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(10px, 10px); }
-    100% { transform: translate(0, 0); }
-  }
-  .floating-icon {
-    animation: float 5s ease-in-out infinite;
-  }
+    .floating-icon {
+      animation: float 5s ease-in-out infinite;
+    }
+     .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+    }
   </style>
 </head>
 
-<body class="bg-black text-white ">
-   
-  <div  class=" cursor fixed rounded-full w-12 h-12 pointer-events-none border-2 border-gray-500 z-50 translate-x-[-50%] translate-y-[-50%]   "> </div><!-- CURSER DIV -->
- 
-  <header class="bg-black text-white sticky-top shadow-slate-600 ">
-    <nav class="flex justify-end space-x-8 p-4 sticky-top mr-56 shadow-white">
-      <a href="#home" class="hover:text-red-500">Home</a>
-      <a href="#about" class="hover:text-red-500">About</a>
-      <a href="#contact" class="hover:text-red-500">Contact</a>
+<body class="bg-black ml-3 ">
+
+  <div
+    class=" cursor fixed rounded-full w-12 h-12 pointer-events-none border-2 border-gray-500 z-50 translate-x-[-50%] translate-y-[-50%]   ">
+  </div><!-- CURSER DIV -->
+  <header class="bg-black text-white sticky-top shadow-slate-600 z-30">
+    <nav class="flex justify-end space-x-8 p-4 sticky-top mr-56 shadow-white text-xl">
+      <a href="#header" class="hover:text-red-500 font-semibold">Home</a>
+      <a href="about.html" class="hover:text-red-500 font-semibold" target="_blank">About</a>
+      <a href="#Contact" class="hover:text-red-500 font-semibold">Contact</a>
     </nav>
   </header>
 
-  <main class="flex flex-col h-screen md:flex-row p-4">
+  <main id="header" class="flex flex-col h-screen md:flex-row p-4">
     <!-- Left side content -->
-    <div class="flex-1 flex flex-col justify-center space-y-4">
+    <div class="flex-1 flex flex-col justify-center text-white ml-9">
       <h1 class="text-9xl font-bold">
         HY ? <br />I'm
         <span class="text-red-500 custom-font-bold shadow">sagar</span>
       </h1>
     </div>
-<!-- Right side content imases annd floting icos -->
-<div class="relative flex-1 flex justify-center">
-  <img src="static/profile2.webp" alt="Sagar's Photo" class="object-cover rounded-full h-full p-16" />
+    <!-- Right side content imases annd floting icos -->
+    <div class="relative flex-1 flex justify-center">
+      <img src="static/profile2.webp" alt="Sagar's Photo" class=" rounded-full h-full p-16" />
 
-  <div class="absolute top-20 left-[30%] w-12 h-12 floating-icon" style="animation-delay: 0s; animation-duration: 5s;" >
-    <img src="static/svg/djangoproject-svgrepo-com.svg" alt="Icon">
-  </div>
-  <div class="absolute top-60 left-[15%] w-12 h-12 floating-icon " style="animation-delay: 1s; animation-duration: 6s;" >
-    <img src="static/svg/git-svgrepo-com.svg" alt="Icon">
-  </div>
-  <div class="absolute top-[10%] left-[60%] w-12 h-12 floating-icon" style="animation-delay: 2s; animation-duration: 7s;" >
-    <img src="static/svg/html-5-svgrepo-com.svg" alt="HTML5 Icon">
-  </div>
-  <div class="absolute top-[30%] left-[70%] w-12 h-12 floating-icon" style="animation-delay: 3s; animation-duration: 8s;" >
-    <img src="static/svg/css-3-svgrepo-com.svg" alt="Icon">
-  </div>
-  <div class="absolute top-[68%] left-[65%] w-12 h-12 bg-black rounded-md floating-icon" style="animation-delay: 4s; animation-duration: 9s;" >
-    <img src="static/svg/tailwind-svgrepo-com.svg" alt="Icon">
-  </div>
-  <div class="absolute top-[70%] left-[20%] w-12 h-12 floating-icon" style="animation-delay: 5s; animation-duration: 9.5s;" >
-    <img src="static/svg/python-svgrepo-com.svg" alt="Icon">
-  </div>
-  <div class="absolute top-[80%] left-[40%] w-12 h-12 floating-icon">
-    <img src="static/svg/github-svgrepo-com.svg" alt="Icon">
-  </div>
-</div>
-</main>
-  
-  <!-- Placeholder for projects section -->
-  <div class=" text-white p-8">
-    <h1 class="text-6xl m-0">Projects</h1>
-    <div class="mt-8 flex">
-      <div>
-        <p class="text-xl p-5">• Blog website (Django)</p>
-        <p class="mt-5 w-96 mx-4">
-          A website that performs all the CRUD operations using Django and
-          multiple login and post with many features. Lorem ipsum, dolor sit
-          amet consectetur adipisicing elit. Quod incidunt itaque, saepe iste
-          ipsa ab at quas tempore eius aliquid sit deleniti suscipit autem,
-          assumenda nulla tenetur dicta reiciendis explicabo!
-        </p>
+      <div class="absolute top-20 left-[30%] w-12 h-12 floating-icon"
+        style="animation-delay: 0s; animation-duration: 5s;">
+        <img src="static/svg/djangoproject-svgrepo-com.svg" alt="Icon">
       </div>
-      <div class="flex space-x-4 overflow-hidden">
-        <div class="w-1/3 h-72 ">
-          <img class="w-full h-full object-cover " src="static/02.jpg" alt="image" />
-        </div>
-        <div class="w-1/3 h-72 ">
-          <img class="w-full h-full object-cover" src="static/01.jpg" alt="image" />
-        </div>
-        <div class="w-1/3 h-72 ">
-          <img class="w-full h-full object-cover" src="static/03.jpg" alt="image" />
-        </div>
+      <div class="absolute top-60 left-[15%] w-12 h-12 floating-icon "
+        style="animation-delay: 1s; animation-duration: 6s;">
+        <img src="static/svg/git-svgrepo-com.svg" alt="Icon">
+      </div>
+      <div class="absolute top-[10%] left-[60%] w-12 h-12 floating-icon"
+        style="animation-delay: 2s; animation-duration: 7s;">
+        <img src="static/svg/html-5-svgrepo-com.svg" alt="HTML5 Icon">
+      </div>
+      <div class="absolute top-[30%] left-[70%] w-12 h-12 floating-icon"
+        style="animation-delay: 3s; animation-duration: 8s;">
+        <img src="static/svg/css-3-svgrepo-com.svg" alt="Icon">
+      </div>
+      <div class="absolute top-[68%] left-[65%] w-12 h-12 bg-black rounded-md floating-icon"
+        style="animation-delay: 4s; animation-duration: 9s;">
+        <img src="static/svg/tailwind-svgrepo-com.svg" alt="Icon">
+      </div>
+      <div class="absolute top-[70%] left-[20%] w-12 h-12 floating-icon"
+        style="animation-delay: 5s; animation-duration: 9.5s;">
+        <img src="static/svg/python-svgrepo-com.svg" alt="Icon">
+      </div>
+      <div class="absolute top-[80%] left-[40%] w-12 h-12 floating-icon">
+        <img src="static/svg/github-svgrepo-com.svg" alt="Icon">
       </div>
     </div>
-  </div>
+  </main>
 
+  <!-- Placeholder for projects section -->
+  <div class="container mx-auto p-8  text-white">
+    <h1 class="text-6xl font-extrabold mb-8">Projects</h1>
+    <div class="bg-red-300  rounded-lg shadow-lg overflow-hidden text-black">
+        <div class="md:flex">
+            <!-- Left Div -->
+            <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold">Blog Website (Django)</h2>
+                <p class="mt-4 text-xl">
+                    A website that performs all the CRUD operations using Django and multiple login and post with many features. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod incidunt itaque, saepe iste ipsa ab at quas tempore eius aliquid sit deleniti suscipit autem, assumenda nulla tenetur dicta reiciendis explicabo!
+                </p>
+            </div>
+            <!-- Right Div -->
+            <div class="md:w-1/2 grid grid-cols-2 gap-4 p-4">
+                <div class="col-span-2 hover-effect rounded-lg shadow-lg">
+                    <img class="w-full h-48 object-cover rounded-lg" src="static/02.jpg" alt="image" />
+                </div>
+                <div class="hover-effect rounded-lg shadow-lg">
+                    <img class="w-full h-48 object-cover rounded-lg" src="static/01.jpg" alt="image" />
+                </div>
+                <div class="hover-effect rounded-lg shadow-lg">
+                    <img class="w-full h-48 object-cover rounded-lg" src="static/03.jpg" alt="image" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
   <!-- Placeholder for Contact section -->
-  <div class="container mt-96 mb-20">
-
-    <div class="bg-green-300 p-8 shadow-md rounded-lg max-w-4xl mx-auto">
-      <h1 class="text-6xl font-bold text-gray-800 mb-10 ">Contact</h1>
+  <section id="Contact" class="mt-96 mb-20 pt-24 " > 
+    <div class="bg-red-300 p-8 shadow-lg rounded-lg  mx-auto">
+      <h1 class="text-8xl font-bold text-gray-800 mb-10 ">Contact</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div>
           <p class="text-2xl  text-gray-800  mb-5">Contact Information</p>
@@ -156,31 +176,32 @@
           </form>
         </div>
       </div>
-    </div>
+  </section>
   </div>
   <!-- footer content  -->
-  <footer class="container bg-green-200 py-6 text-black ">
-    <h4 class="m-5 p-5 text-center text-4xl font-semibold">All the stars are closer !</h4>
-    <h4 class="text-4xl font-semibold"></h4>
-  
+  <footer class="bg-red-50 py-6 mt-96 text-black rounded-lg shadow-lg">
+    <h4 class="m-5 p-5 text-center text-4xl font-semibold font-serif ">LESS , BUT BETTER. <br> <span
+        class="text-red-500 text-bold ">a principal of a good design </span></h4>
+
     <div class="container mx-auto flex items-center justify-between p-5 ">
-      <div class="w-1/3">
-        <p>Email: <a href="mailto:youremail@example.com" class="text-blue-400">youremail@example.com</a></p>
+      <div class="w-1/3"> 
+        <p>Email: <a href="mailto:shahsagar0988@gmail.com" class="underline hover:text-xl ">shahsagar0988@gmail.com</a>
+        </p>
       </div>
       <div class="w-1/3">
         <h4 class="text-xl font-semibold">Follow Me</h4>
         <div class="flex flex-col text-left">
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-xl">LinkedIn</a>
-          <a href="https://github.com/yourprofile" target="_blank" class="hover:text-xl">GitHub</a>
-          <a href="https://twitter.com/yourprofile" target="_blank" class="hover:text-xl">Twitter</a>
+          <a href="https://linkedin.com/in/" target="_blank" class="hover:text-xl">LinkedIn</a>
+          <a href="https://github.com/sagardonat" target="_blank" class="hover:text-xl">GitHub</a>
+          <a href="https://www.facebook.com/YoungDaggerSagar" target="_blank" class="hover:text-xl">Twitter</a>
         </div>
       </div>
-      <div class="w-1/3">
+      <div class="w-1/3 overflow-hidden">
         <h4 class="text-xl font-semibold">Quick Links</h4>
         <ul>
-          <li><a href="#home" class="text-blue-400">Home</a></li>
-          <li><a href="#about" class="text-blue-400">About</a></li>
-          <li><a href="#contact" class="text-blue-400">Contact</a></li>
+          <li><a href="#home" class="underline hover:text-xl duration-400">Home</a></li>
+          <li><a href="#about" class="underline hover:text-xl ">About</a></li>
+          <li><a href="#contact" class="underline hover:text-xl ">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -188,7 +209,8 @@
       <p>© 2024 SAGAR. All rights reserved.</p>
     </div>
   </footer>
-  
+
   <script src="script.js"></script>
 </body>
+
 </html>
