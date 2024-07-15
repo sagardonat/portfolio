@@ -1,15 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=#about, initial-scale=1.0">
-    <title>About-Sagar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Sagar</title>
+  <link rel="stylesheet" href="src/output.css">
+  <style>
+    .fade-enter {
+      opacity: 0;
+    }
+
+    .fade-enter-active {
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+
+    .fade-exit {
+      opacity: 1;
+    }
+
+    .fade-exit-active {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+  </style>
 </head>
-<body>
-    <div class="flex m-auto flex-col ">
-        <div class=""></div>
-        <div class=""> <img src="static/images/pictures (1).jpg" alt="my-picture"></div>
-        <div class=""></div>
+
+<body class="h-screen w-screen bg-red-50">
+  <div id="circle"
+    class=" cursor  fixed rounded-full w-12 h-12 pointer-events-none border-2 border-gray-500 z-50 translate-x-[-50%] translate-y-[-50%]   ">
+  </div><!-- CURSER DIV -->
+  <header class=" sticky-top shadow-slate-600 z-30">
+    <nav class="flex justify-end space-x-8 p-4 sticky-top mr-56 shadow-white text-xl">
+      <a href="index.html" class="hover:text-red-500 font-semibold">Home</a>
+      <a href="#header" class="hover:text-red-500 font-semibold">About</a>
+      <a href="index.html" class="hover:text-red-500 font-semibold">Contact</a>
+    </nav>
+  </header>
+  <!-- main div height and width of the screen -->
+  <div class="flex h-full w-full m-auto flex-col md:flex-row ">
+    <!-- left side div 40% of the width -->
+    <div class="w-full md:w-2/5 p-4 flex flex-col justify-center align-middle">
+      <h1 class="text-8xl font-bold mb-4">About me</h1>
+      <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde suscipit tempora odit laborum
+        magni, id hic aperiam alias nesciunt quam, recusandae sapiente quod officia, optio non?
+        Quae accusantium iste dolorem odit minima non, facere, rem, tempora eveniet aliquam quos
+        nihil adipisci tenetur. Unde, nihil architecto.
+      </p>
     </div>
+    <!-- right side content remaining 60% width  -->
+    <div class="w-full md:w-3/5 p-4 flex flex-col items-center justify-center">
+      <!-- a text above the img like a caption to the image  -->
+      <div id="caption" class=" mb-2 p-5 w-72 text-center text-lg font-bold fade-enter fade-enter-active delay-200">Just look
+        around to see what's going on
+        <span class="text-red-500"> around you </span>
+      </div>
+      <div class="relative">
+        <!-- shape behind the image -->
+        <div class="absolute top-6 left-6 w-full h-full bg-gray-200"></div>
+        <!-- image with fixed size -->
+        <img id="slideshow-image" class=" relative w-72 h-96 object-cover fade-enter fade-enter-active"
+          src="static/images/pictures (2).jpg" alt="my-picture">
+      </div>
+      <!-- a div that indicates the number of pictures  -->
+      <div id="indicators" class="flex space-x-4 mt-10  ">
+        <!-- js will add the divs -->
+        <div class="w-14 h-1 bg-gray-800"></div>
+        <div class="w-14 h-1 bg-gray-300"></div>
+        <div class="w-14 h-1 bg-gray-300"></div>
+        <div class="w-14 h-1 bg-gray-300"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
